@@ -1,0 +1,436 @@
+/* =========================================
+  1. GLOBALES Y RESET
+   ========================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(17, 17, 17);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  margin: 20px 50px;
+}
+
+hr {
+  border: 1px solid rgb(41, 41, 41);
+  margin: 20px 0;
+}
+
+/* =========================================
+  2. LAYOUT PRINCIPAL (GRILLA)
+   ========================================= */
+.contenedorMain {
+  display: flex;
+}
+
+/* --- Estructura de Columnas --- */
+.column1 {
+  position: sticky;
+  top: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  border: 1px solid rgb(41, 41, 41);
+  padding: 20px 10px 10px 10px;
+  margin: 10px;
+  width: 25%;
+  height: fit-content;
+}
+
+.column2 {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgb(41, 41, 41);
+  margin: 10px;
+  border-radius: 20px;
+  width: 75%;
+  overflow: hidden;
+}
+
+/* --- Secciones de Contenido (Visibilidad) --- */
+#Projects {
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+}
+
+#About {
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+}
+
+#Contact {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+}
+
+/* =========================================
+  3. COLUMNA 1: PERFIL Y SIDEBAR
+   ========================================= */
+.foto {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 15px;
+  display: block;
+}
+
+.nombre {
+  text-align: center;
+  font-size: 23px;
+  margin: 20px auto;
+}
+
+.ptag {
+  text-align: center;
+  margin: 10px auto;
+  max-width: 200px;
+  background-color: rgb(54, 54, 54);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+/* --- Lista de Datos de Contacto --- */
+.column1-buttom ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 10px;
+  border-top: 1px solid rgb(56, 56, 56);
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.cont-icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  min-height: 38px;
+  max-width: 38px;
+  max-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(36, 36, 36);
+  border-left: 1px solid rgb(51, 51, 51);
+  border-top: 1px solid rgb(51, 51, 51);
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+.label {
+  color: gray;
+  font-size: 14px;
+}
+
+.value {
+  font-size: 12px;
+}
+
+/* =========================================
+  4. COLUMNA 2: NAVEGACIÓN
+   ========================================= */
+.navegacion {
+  max-width: fit-content;
+  height: 45px;
+  background-color: transparent;
+  border: 1px solid rgb(41, 41, 41);
+  border-top: 0px;
+  border-right: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-left: auto;
+  border-radius: 0 20px 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.navegacion li {
+  padding: 3px 5px;
+  margin: 0px 20px;
+}
+
+.navegacion li button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: color 0.1s linear;
+}
+
+.navegacion li button:hover {
+  color: rgb(0, 153, 255);
+}
+
+/* =========================================
+  5. TIPOGRAFÍA Y ESTILOS GENERALES
+   ========================================= */
+.column2 h1,
+h2,
+h3,
+p,
+.linea {
+  margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3,
+strong {
+  color: #acffff;
+}
+
+.linea {
+  width: 60px;
+  height: 3px;
+  background-color: aqua;
+  border-radius: 3px;
+}
+
+/* --- Iconos Material Symbols --- */
+.material-symbols-outlined {
+  font-size: 20px;
+  color: aqua;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 100,
+    'GRAD' 0,
+    'opsz' 24;
+}
+
+/* =========================================
+  6. COMPONENTE: LOGOS (Carousel)
+   ========================================= */
+.column2 .contenedor-logos {
+  margin: 40px 0;
+}
+
+.contenedor-logos {
+  display: flex;
+  margin: 20px auto;
+  padding: 20px;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.contenedor-logos div {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#About .contenedor-logos img,
+#Projects .contenedor-logos img {
+  width: 100px;
+  height: 100px;
+}
+
+.contenedor-logos img {
+  object-fit: contain;
+}
+
+/* --- Scrollbar Personalizado --- */
+.contenedor-logos::-webkit-scrollbar {
+  height: 8px;
+}
+
+.contenedor-logos::-webkit-scrollbar-track {
+  background: #2a2a2a;
+  border-radius: 10px;
+}
+
+.contenedor-logos::-webkit-scrollbar-thumb {
+  background-color: #00d2ff;
+  border-radius: 10px;
+  border: 2px solid #2a2a2a;
+}
+
+.contenedor-logos::-webkit-scrollbar-thumb:hover {
+  background-color: #00aadd;
+}
+
+/* =========================================
+  7. COMPONENTE: TARJETAS (Projects)
+   ========================================= */
+.containerProjects {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  width: 400px;
+  height: fit-content;
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 20px;
+  border: 1px solid rgb(41, 41, 41);
+}
+
+.div-img {
+  height: 70%;
+  width: 95%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.imgCard {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: all 0.5s ease;
+}
+
+.imgCard:hover {
+  transform: scale(1.1);
+}
+
+.card p {
+  text-align: center;
+  margin-top: 1px;
+  font-size: 20px;
+  margin: 3px 0;
+}
+
+.card p img {
+  width: 20px;
+  height: 20px;
+  margin: 3px 3px;
+}
+
+.card .enlaces {
+  height: 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px;
+  margin: 5px 5px;
+  border-radius: 10px;
+  border: 1px solid #00ffff;
+  color: #00ffff;
+}
+
+/* =========================================
+  8. COMPONENTE: BOTONES DE CONTACTO
+   ========================================= */
+.enlacesContacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.enlacesContacto a div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos comunes de botones */
+.btn-tel,
+.btn-whatsapp,
+.btn-email,
+.btn-instagram,
+.btn-github,
+.btn-linkedin {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  min-width: 250px;
+  max-width: 600px;
+  height: 50px;
+  font-size: 30px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Colores específicos */
+.btn-tel {
+  background-color: #0044cc;
+}
+
+.btn-whatsapp {
+  background-color: rgb(0, 145, 0);
+}
+
+.btn-email {
+  background-color: rgb(192, 0, 0);
+}
+
+.btn-instagram {
+  background-color: rgb(252, 0, 210);
+}
+
+.btn-github {
+  background-color: #303030;
+}
+
+.btn-linkedin {
+  background-color: #0095c2;
+}
+
+/* =========================================
+  9. COMPONENTE: BOTÓN VOLVER (FLOTANTE)
+   ========================================= */
+.boton-volver {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #00ffff;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 50px;
+  right: 5px;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.boton-volver a {
+  color: #00ffff;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
