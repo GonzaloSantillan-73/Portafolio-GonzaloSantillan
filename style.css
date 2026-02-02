@@ -518,4 +518,18 @@ strong {
   .nombre{
     margin: 10px auto;
   }
+
+  #Projects,#About,#Contact{
+    padding: 60px 30px 30px 30px;
+  }
+
+  .navegacion{
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid rgb(41, 41, 41);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-radius: 0;
+  }
 }
