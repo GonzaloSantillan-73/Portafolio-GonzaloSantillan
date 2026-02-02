@@ -174,44 +174,48 @@
     <div id="contenedorMain" class="contenedorMain">
       <!--Columna 1-->
       <div class="column1">
-        <img class="foto" src="img/foto.jpg" class="img-cover" />
-        <p class="nombre">Gonzalo Santillán</p>
-        <p class="ptag">Desarrollador Web<br />Full Stack</p>
+        <div class="foto-nombre">
+          <img class="foto" src="img/foto.jpg" class="img-cover" />
+          <div>
+            <p class="nombre">Gonzalo Santillán</p>
+            <p class="ptag">Desarrollador Web<br />Full Stack</p>
+          </div>
+        </div>
 
         <hr />
 
         <!--Lista datos-->
-        <ul>
-          <li>
-            <div class="cont-icon">
-              <span class="material-symbols-outlined">mobile_2</span>
-            </div>
-            <div>
-              <span class="label">PHONE</span> <br />
-              <span class="value">(54) 3834235163</span>
-            </div>
-          </li>
-
-          <li>
-            <div class="cont-icon">
-              <span class="material-symbols-outlined">mail</span>
-            </div>
-            <div>
-              <span class="label">EMAIL</span> <br />
-              <span class="value">lsantillangonzalo73@gmail.com</span>
-            </div>
-          </li>
-
-          <li>
-            <div class="cont-icon">
-              <span class="material-symbols-outlined">location_on</span>
-            </div>
-            <div>
-              <span class="label">LOCATION</span> <br />
-              <span class="value">Argentina</span>
-            </div>
-          </li>
-        </ul>
+        <div class="list-datos">
+          <ul>
+            <li>
+              <div class="cont-icon">
+                <span class="material-symbols-outlined">mobile_2</span>
+              </div>
+              <div>
+                <span class="label">PHONE</span> <br />
+                <span class="value">(54) 3834235163</span>
+              </div>
+            </li>
+            <li>
+              <div class="cont-icon">
+                <span class="material-symbols-outlined">mail</span>
+              </div>
+              <div>
+                <span class="label">EMAIL</span> <br />
+                <span class="value">lsantillangonzalo73@gmail.com</span>
+              </div>
+            </li>
+            <li>
+              <div class="cont-icon">
+                <span class="material-symbols-outlined">location_on</span>
+              </div>
+              <div>
+                <span class="label">LOCATION</span> <br />
+                <span class="value">Argentina</span>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <!--Columna 2-->
@@ -236,6 +240,7 @@
               <div><img src="img/mongodb.png" alt="" />MongoDB</div>
               <div><img src="img/HTML5.png" alt="" />HTML5</div>
               <div><img src="img/CSS3.png" alt="" />CSS3</div>
+              <div><img src="img/Figma.png" alt="" />Figma</div>
               <div><img src="img/ejs.png" alt="" />EJS</div>
               <div><img src="img/Tailwind.png" alt="" />Tailwind</div>
               <div><img src="img/git.png" alt="" />Git</div>
@@ -249,7 +254,7 @@
                   <img class="imgCard" src="img/superheroes.png" alt="" />
                 </div>
                 <p>Dashboard Paises Hispanos(CRUD)</p>
-                <p>
+                <p class="herramientas-usadas">
                   <img src="img/node-js.png" alt="" />
                   <img src="img/ejs.png" alt="" />
                   <img src="img/javascript.png" alt="" />
@@ -272,11 +277,10 @@
                   <img class="imgCard" src="img/viajArte.png" alt="" />
                 </div>
                 <p>Agencia de viajes</p>
-                <p>
-                  <img src="img/HTML5.png" alt="" /><img
-                    src="img/CSS3.png"
-                    alt=""
-                  /><img src="img/Tailwind.png" alt="" />
+                <p class="herramientas-usadas">
+                  <img src="img/HTML5.png" alt="" />
+                  <img src="img/CSS3.png" alt="" />
+                  <img src="img/Tailwind.png" alt="" />
                 </p>
                 <div class="enlaces">
                   <a href="https://viajarte.netlify.app/" target="_blank"
@@ -289,6 +293,30 @@
                   >
                 </div>
               </div>
+              <!--Aplicacion de tareas-->
+              <div class="card">
+                <div class="div-img">
+                  <img class="imgCard" src="img/aplicacionDeTareas.png" alt="" />
+                </div>
+                <p>Aplicacion de tareas</p>
+                <p class="herramientas-usadas">
+                  <img src="img/HTML5.png" alt="" />
+                  <img src="img/CSS3.png" alt="" />
+                  <img src="img/React.png" alt="" />
+                  <img src="img/javascript.png" alt="" />
+                </p>
+                <div class="enlaces">
+                  <a href="https://aplicaciontareass.netlify.app/" target="_blank"
+                    ><ion-icon name="link-outline"></ion-icon> Visit</a
+                  >
+                  <a
+                    href="https://github.com/GonzaloSantillan-73/Aplicacion-de-Tareas.git"
+                    target="_blank"
+                    ><ion-icon name="logo-github"></ion-icon>GitHub</a
+                  >
+                </div>
+              </div>
+
             </div>
           </div>
           <!--    Sobre mi    -->
@@ -330,10 +358,12 @@
               <div><img src="img/mongodb.png" alt="" />MongoDB</div>
               <div><img src="img/HTML5.png" alt="" />HTML5</div>
               <div><img src="img/CSS3.png" alt="" />CSS3</div>
+              <div><img src="img/Figma.png" alt="" />Figma</div>
+              <div><img src="img/ejs.png" alt="" />EJS</div>
+              <div><img src="img/Tailwind.png" alt="" />Tailwind</div>
               <div><img src="img/git.png" alt="" />Git</div>
               <div><img src="img/github.png" alt="" />GitHub</div>
               <div><img src="img/gitlab.png" alt="" />GitLab</div>
-              <div><img src="img/Tailwind.png" alt="" />Tailwind</div>
             </div>
           </div>
           <!--    Contacto    -->
@@ -411,9 +441,7 @@
       </div>
     </div>
     <div class="boton-volver">
-      <a href="#contenedorMain"
-        ><ion-icon name="chevron-up-outline"></ion-icon
-      ></a>
+      <a href="#contenedorMain"><ion-icon name="chevron-up-outline"></ion-icon></a>
     </div>
   </body>
 </html>

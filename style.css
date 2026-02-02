@@ -11,7 +11,7 @@ body {
   background-color: rgb(17, 17, 17);
   color: white;
   font-family: "Montserrat", sans-serif;
-  margin: 20px 50px;
+  margin: 20px 30px;
 }
 
 hr {
@@ -24,6 +24,8 @@ hr {
    ========================================= */
 .contenedorMain {
   display: flex;
+  justify-content: center;
+
 }
 
 /* --- Estructura de Columnas --- */
@@ -113,12 +115,12 @@ li {
 }
 
 .cont-icon {
-  width: 38px;
-  height: 38px;
-  min-width: 38px;
-  min-height: 38px;
-  max-width: 38px;
-  max-height: 38px;
+  width: 33px;
+  height: 33px;
+  min-width: 33px;
+  min-height: 33px;
+  max-width: 33px;
+  max-height: 33px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -289,6 +291,10 @@ strong {
   border: 1px solid rgb(41, 41, 41);
 }
 
+.herramientas-usadas img{
+  object-fit: contain;
+}
+
 .div-img {
   height: 70%;
   width: 95%;
@@ -387,24 +393,48 @@ strong {
   background-color: #224996;
 }
 
+.btn-tel:hover{
+  background-color: #3567cc;
+}
+
 .btn-whatsapp {
   background-color: rgb(37, 119, 37);
+}
+
+.btn-whatsapp:hover{
+  background-color: rgb(53, 177, 53);
 }
 
 .btn-email {
   background-color: rgb(131, 34, 34);
 }
 
+.btn-email:hover{
+  background-color: rgb(180, 48, 48);
+}
+
 .btn-instagram {
   background-color: rgb(128, 39, 113);
+}
+
+.btn-instagram:hover{
+  background-color: rgb(173, 48, 152);
 }
 
 .btn-github {
   background-color: #303030;
 }
 
+.btn-github:hover{
+  background-color: #494949;
+}
+
 .btn-linkedin {
   background-color: #2a7288;
+}
+
+.btn-linkedin:hover{
+  background-color: #3b9bb8;
 }
 
 /* =========================================
@@ -423,6 +453,11 @@ strong {
   right: 5px;
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.4);
+  transition: transform 0.1s ease
+}
+
+.boton-volver:hover{
+  transform: scale(1.10);
 }
 
 .boton-volver a {
@@ -433,4 +468,54 @@ strong {
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 1099px){
+  body{
+    margin: 0;
+  }
+
+  .contenedorMain{
+    display: block;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .column1{
+    position: static;
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    padding: 5px;
+  }
+
+  .column2{
+    width: 100%;
+    margin: 0;
+  }
+
+  hr{
+    display: none;
+  }
+
+  .list-datos{
+    display: none;
+  }
+
+  .foto{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+  }
+
+  .foto-nombre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nombre{
+    margin: 10px auto;
+  }
 }
