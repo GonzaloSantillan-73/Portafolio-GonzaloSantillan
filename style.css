@@ -284,7 +284,8 @@ strong {
 
 .card {
   width: 400px;
-  height: fit-content;
+  display: flex;
+  flex-direction: column;
   padding: 10px;
   background-color: transparent;
   border-radius: 20px;
@@ -296,7 +297,7 @@ strong {
 }
 
 .div-img {
-  height: 70%;
+  aspect-ratio: 16 / 9;
   width: 95%;
   margin: 0 auto;
   overflow: hidden;
@@ -307,6 +308,7 @@ strong {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
   border-radius: 20px;
   transition: all 0.5s ease;
 }
@@ -329,7 +331,8 @@ strong {
 }
 
 .card .enlaces {
-  height: 82px;
+  min-height: 110px;
+  margin-top: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
